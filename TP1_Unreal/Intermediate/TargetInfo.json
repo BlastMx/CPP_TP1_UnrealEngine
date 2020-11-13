@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TP1_Unreal",
+			"Path": "C:\\Users\\mxcol\\Documents\\Unreal Projects\\CPP_TP1_UnrealEngine\\TP1_Unreal\\Source\\TP1_Unreal.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TP1_UnrealEditor",
+			"Path": "C:\\Users\\mxcol\\Documents\\Unreal Projects\\CPP_TP1_UnrealEngine\\TP1_Unreal\\Source\\TP1_UnrealEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
