@@ -21,6 +21,9 @@ class ATP1_UnrealCharacter : public ACharacter
 public:
 	ATP1_UnrealCharacter();
 
+	UPROPERTY(EditAnywhere, Category = Health)
+		float Health;
+
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -29,7 +32,11 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TSubclassOf<AActor> ActorToSpawn;
+
 protected:
+	virtual void BeginPlay() override;
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
@@ -68,5 +75,9 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-};
 
+	UFUNCTION()
+	void SpawnObject(FVector Location, FRotator Rotation);
+
+	void SetHealth(float value);
+};

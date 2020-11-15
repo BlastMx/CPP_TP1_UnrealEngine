@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TP1_UnrealCharacter.h"
 #include "GameFramework/GameModeBase.h"
 #include "TP1_UnrealGameMode.generated.h"
 
@@ -13,6 +14,15 @@ class ATP1_UnrealGameMode : public AGameModeBase
 
 public:
 	ATP1_UnrealGameMode();
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 };
 
 

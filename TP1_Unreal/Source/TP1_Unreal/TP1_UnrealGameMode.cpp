@@ -3,6 +3,7 @@
 #include "TP1_UnrealGameMode.h"
 #include "TP1_UnrealCharacter.h"
 #include "UObject/ConstructorHelpers.h"
+#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 
 ATP1_UnrealGameMode::ATP1_UnrealGameMode()
 {
@@ -12,4 +13,17 @@ ATP1_UnrealGameMode::ATP1_UnrealGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+}
+
+// Called when the game starts or when spawned
+void ATP1_UnrealGameMode::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+
+// Called every frame
+void ATP1_UnrealGameMode::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 }

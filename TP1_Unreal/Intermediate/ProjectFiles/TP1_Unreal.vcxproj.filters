@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TP1_Unreal.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{85D0513A-B300-49C7-BFBD-8FFA7CDD6726}</UniqueIdentifier>
+      <UniqueIdentifier>{3E034226-DDCE-4669-8100-2788F93B14DE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TP1_Unreal.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A0A0F0E4-AE65-4F7A-86B9-125137BC2DCF}</UniqueIdentifier>
+      <UniqueIdentifier>{8D5B8E68-3073-44F1-854C-DD2CE9C71FC0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,26 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TP1_Unreal">
-      <UniqueIdentifier>{3B2C5C78-1539-45A0-99F7-D2B0F9B69A03}</UniqueIdentifier>
+      <UniqueIdentifier>{C6B08FD1-FA66-4674-86BF-69593A3FF386}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TP1_Unreal\Lava.cpp">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TP1_Unreal\Lava.h">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TP1_Unreal\MyPickUp.cpp">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TP1_Unreal\MyPickUp.h">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TP1_Unreal\RespawnPlayer.cpp">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TP1_Unreal\RespawnPlayer.h">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TP1_Unreal\TP1_Unreal.Build.cs">
       <Filter>Source\TP1_Unreal</Filter>
     </None>

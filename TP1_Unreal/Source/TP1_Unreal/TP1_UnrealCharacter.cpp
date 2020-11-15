@@ -47,6 +47,13 @@ ATP1_UnrealCharacter::ATP1_UnrealCharacter()
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
 
+void ATP1_UnrealCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	Health = 100.0f;
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 
@@ -92,6 +99,12 @@ void ATP1_UnrealCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector L
 		StopJumping();
 }
 
+void ATP1_UnrealCharacter::SpawnObject(FVector Loc, FRotator Rot)
+{
+	FActorSpawnParameters SpawnParams;
+	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(ActorToSpawn, Loc, Rot, SpawnParams);
+}
+
 void ATP1_UnrealCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
@@ -131,4 +144,10 @@ void ATP1_UnrealCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ATP1_UnrealCharacter::SetHealth(float value)
+{
+	Health = 0.0f;
+	printf("%.6f", Health);
 }

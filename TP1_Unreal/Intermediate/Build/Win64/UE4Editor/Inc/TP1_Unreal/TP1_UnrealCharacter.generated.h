@@ -8,14 +8,24 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
+struct FRotator;
 #ifdef TP1_UNREAL_TP1_UnrealCharacter_generated_h
 #error "TP1_UnrealCharacter.generated.h already included, missing '#pragma once' in TP1_UnrealCharacter.h"
 #endif
 #define TP1_UNREAL_TP1_UnrealCharacter_generated_h
 
 #define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_SPARSE_DATA
-#define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS
-#define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSpawnObject);
+
+
+#define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSpawnObject);
+
+
 #define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATP1_UnrealCharacter(); \
