@@ -4,6 +4,8 @@
 #include "RespawnPlayer.h"
 #include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
 #include "GameFramework/Pawn.h"
+#include "GameFramework/Controller.h"
+#include "GameFramework/Actor.h"
 
 // Sets default values
 ARespawnPlayer::ARespawnPlayer()
@@ -21,7 +23,6 @@ void ARespawnPlayer::BeginPlay()
 	Super::BeginPlay();
 
 	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	
 }
 
 // Called every frame
@@ -32,18 +33,16 @@ void ARespawnPlayer::Tick(float DeltaTime)
 
 void ARespawnPlayer::MyDoOnce()
 {
-	ThirdPersonCharacter->Destroy(); //Detruit le player au contact de la lave
-	SpawnObject(startPos, startRot); //Fait spawn un nouveau ThirdPersonCharacter
-	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)); //Réattribu le cast au nouveau player
+	AController* SavedController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	SavedController->UnPossess();
 
-	Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-
-	Controller->Possess(Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0)));
-}
-
-void ARespawnPlayer::SpawnObject(FVector Loc, FRotator Rot)
-{
+	ThirdPersonCharacter->Destroy();
+	
 	FActorSpawnParameters SpawnParams;
-	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(ActorToSpawn, Loc, Rot, SpawnParams);
+	APawn* myPawn = GetWorld()->SpawnActor<APawn>(ActorToSpawn, FTransform(startPos));
+
+	SavedController->Possess(myPawn);
+
+	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 }
 

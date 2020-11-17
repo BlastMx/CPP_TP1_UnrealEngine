@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "TP1_UnrealCharacter.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/Pawn.h"
+#include "GameFramework/Controller.h"
 #include "RespawnPlayer.generated.h"
 
 UCLASS()
@@ -33,9 +35,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Start Value")
 		FRotator startRot;
 
-	UPROPERTY(EditAnywhere)
-		AController* Controller;
-
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -46,7 +45,4 @@ public:
 
 	UFUNCTION()
 	void MyDoOnce();
-
-	UFUNCTION()
-	void SpawnObject(FVector Location, FRotator Rotation);
 };

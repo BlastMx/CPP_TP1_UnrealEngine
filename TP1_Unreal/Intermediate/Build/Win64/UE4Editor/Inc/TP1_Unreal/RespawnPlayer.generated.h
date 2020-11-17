@@ -8,27 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FVector;
-struct FRotator;
 #ifdef TP1_UNREAL_RespawnPlayer_generated_h
 #error "RespawnPlayer.generated.h already included, missing '#pragma once' in RespawnPlayer.h"
 #endif
 #define TP1_UNREAL_RespawnPlayer_generated_h
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_SPARSE_DATA
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_RPC_WRAPPERS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_SPARSE_DATA
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSpawnObject); \
 	DECLARE_FUNCTION(execMyDoOnce);
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSpawnObject); \
 	DECLARE_FUNCTION(execMyDoOnce);
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_INCLASS_NO_PURE_DECLS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARespawnPlayer(); \
 	friend struct Z_Construct_UClass_ARespawnPlayer_Statics; \
@@ -37,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(ARespawnPlayer)
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_INCLASS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesARespawnPlayer(); \
 	friend struct Z_Construct_UClass_ARespawnPlayer_Statics; \
@@ -46,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(ARespawnPlayer)
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_STANDARD_CONSTRUCTORS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ARespawnPlayer(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARespawnPlayer) \
@@ -59,7 +55,7 @@ private: \
 public:
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_ENHANCED_CONSTRUCTORS \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ARespawnPlayer(ARespawnPlayer&&); \
@@ -70,28 +66,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARespawnPlayer); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARespawnPlayer)
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_PRIVATE_PROPERTY_OFFSET
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_10_PROLOG
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_GENERATED_BODY_LEGACY \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_PRIVATE_PROPERTY_OFFSET
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_12_PROLOG
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_PRIVATE_PROPERTY_OFFSET \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_SPARSE_DATA \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_RPC_WRAPPERS \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_INCLASS \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_STANDARD_CONSTRUCTORS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_PRIVATE_PROPERTY_OFFSET \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_SPARSE_DATA \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_RPC_WRAPPERS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_INCLASS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_GENERATED_BODY \
+#define TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_PRIVATE_PROPERTY_OFFSET \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_SPARSE_DATA \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_INCLASS_NO_PURE_DECLS \
-	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_13_ENHANCED_CONSTRUCTORS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_PRIVATE_PROPERTY_OFFSET \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_SPARSE_DATA \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_INCLASS_NO_PURE_DECLS \
+	TP1_Unreal_Source_TP1_Unreal_RespawnPlayer_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
