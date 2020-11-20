@@ -35,6 +35,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spawning")
 	TSubclassOf<AActor> ActorToSpawn;
 
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	UMaterialInterface* DecaleBullet;
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+	TSubclassOf<AActor> BulletPawn;
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -78,6 +84,9 @@ public:
 
 	UFUNCTION()
 	void SpawnObject(FVector Location, FRotator Rotation);
+
+	UFUNCTION()
+	void SpawnBullet();
 
 	void SetHealth(float value);
 };

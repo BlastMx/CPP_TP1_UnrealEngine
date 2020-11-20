@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TP1_UnrealCharacter.h"
 #include "GameFramework/Actor.h"
 #include "Bullet.generated.h"
 
@@ -19,7 +20,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+
+	ATP1_UnrealCharacter* ThirdPersonCharacter;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -27,7 +31,7 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* Bullet;
-
-	UPROPERTY(EditAnywhere)
-		class USphereComponent* SphereCollision;
+	
+	UFUNCTION()
+		void OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 };

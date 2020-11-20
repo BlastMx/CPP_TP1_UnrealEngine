@@ -3,7 +3,8 @@
 
 #include "Bullet.h"
 #include "Components/StaticMeshComponent.h"
-#include "Components\SphereComponent.h"
+#include "Components/SphereComponent.h"
+#include <Runtime\Engine\Classes\Kismet\GameplayStatics.h>
 
 // Sets default values
 ABullet::ABullet()
@@ -16,22 +17,34 @@ ABullet::ABullet()
 
 	Bullet = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Bullet"));
 	Bullet->SetupAttachment(RootComponent);
+	Bullet->SetSimulatePhysics(true);
 
-	SphereCollision = CreateDefaultSubobject<USphereComponent>(TEXT("Box"));
-	SphereCollision->SetupAttachment(RootComponent);
-	SphereCollision->SetSphereRadius(52.0f);
+	Bullet->SetNotifyRigidBodyCollision(true);
+
+	Bullet->OnComponentHit.AddDynamic(this, &ABullet::OnCompHit);
 }
 
 // Called when the game starts or when spawned
 void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 }
 
 // Called every frame
 void ABullet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	const FVector forward = this->GetActorForwardVector();
+	Bullet->AddForce(forward * 10000.0f * Bullet->GetMass());
+}
+
+void ABullet::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	UGameplayStatics::SpawnDecalAttached(ThirdPersonCharacter->DecaleBullet, FVector(25.0f), NULL, NAME_None, Hit.ImpactPoint, FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset, 10.0f);
+
+	Destroy();
 }
 

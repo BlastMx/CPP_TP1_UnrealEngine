@@ -81,6 +81,9 @@ void ATP1_UnrealCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ATP1_UnrealCharacter::OnResetVR);
+
+	//Shoot bullet
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATP1_UnrealCharacter::SpawnBullet);
 }
 
 
@@ -144,6 +147,16 @@ void ATP1_UnrealCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ATP1_UnrealCharacter::SpawnBullet()
+{
+	FVector posSwpan = GetActorLocation() + FVector(200.0f, 0.0f, 0.0f);
+	FRotator rotSpawn = /*GetActorRotation();*/ FRotator(0.0f, 0.0f, 0.0f);
+
+	FActorSpawnParameters SpawnParams;
+
+	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(BulletPawn, posSwpan, rotSpawn, SpawnParams);
 }
 
 void ATP1_UnrealCharacter::SetHealth(float value)

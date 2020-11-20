@@ -18,11 +18,13 @@ struct FRotator;
 #define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_SPARSE_DATA
 #define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSpawnBullet); \
 	DECLARE_FUNCTION(execSpawnObject);
 
 
 #define TP1_Unreal_Source_TP1_Unreal_TP1_UnrealCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSpawnBullet); \
 	DECLARE_FUNCTION(execSpawnObject);
 
 

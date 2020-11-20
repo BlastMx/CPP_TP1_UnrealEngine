@@ -1,0 +1,104 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine).
+  Parsing headers for TP1_UnrealEditor
+    Running UnrealHeaderTool "C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\TP1_Unreal.uproject" "C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\TP1_UnrealEditor\Development\TP1_UnrealEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\mxcol\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for TP1_UnrealEditor in 32,7131477 seconds
+  Building TP1_UnrealEditor...
+  Using Visual Studio 2019 14.27.29112 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Distributing 7 actions to XGE
+  --------------------Build System Warning---------------------------------------
+  License is invalid:
+      License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+      This build will run in standalone mode.
+  
+  -------------------------------------------------------------------------------
+  --------------------Project: Default-------------------------------------------
+  TP1_Unreal.init.gen.cpp (0:08.15 at +0:00)
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Definitions.TP1_Unreal.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+EXEC : warning : unable to get MBCS string (input text 'Remarque�: inclusion du fichier�: %s%s
+  ', library C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\1036\clui.dll)
+  Bullet.gen.cpp (0:02.57 at +0:08)
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Definitions.TP1_Unreal.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal/Bullet.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\TP1_UnrealCharacter.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+  Remarque : inclusion du fichier :      C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+  Remarque : inclusion du fichier :    C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\TP1_UnrealCharacter.generated.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\Bullet.generated.h
+EXEC : warning : unable to get MBCS string (input text 'Remarque�: inclusion du fichier�: %s%s
+  ', library C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\1036\clui.dll)
+  Lava.cpp (0:03.78 at +0:10)
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Definitions.TP1_Unreal.h
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\Lava.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\TP1_UnrealCharacter.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+  Remarque : inclusion du fichier :      C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+  Remarque : inclusion du fichier :    C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\TP1_UnrealCharacter.generated.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\RespawnPlayer.h
+  Remarque : inclusion du fichier :    C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\RespawnPlayer.generated.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\Lava.generated.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components\BoxComponent.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime/Engine/Classes/Kismet/GameplayStatics.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+EXEC : warning : unable to get MBCS string (input text 'Remarque�: inclusion du fichier�: %s%s
+  ', library C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\1036\clui.dll)
+  Bullet.cpp (0:02.35 at +0:14)
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Definitions.TP1_Unreal.h
+  Remarque : inclusion du fichier :  C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\Bullet.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Source\TP1_Unreal\TP1_UnrealCharacter.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+  Remarque : inclusion du fichier :      C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+  Remarque : inclusion du fichier :    C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\TP1_UnrealCharacter.generated.h
+  Remarque : inclusion du fichier :   C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Inc\TP1_Unreal\Bullet.generated.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+  Remarque : inclusion du fichier :  C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStatics.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+  Remarque : inclusion du fichier :     C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+  Remarque : inclusion du fichier :    C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+  Remarque : inclusion du fichier :   C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+EXEC : warning : unable to get MBCS string (input text 'Remarque�: inclusion du fichier�: %s%s
+  ', library C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX64\x64\1036\clui.dll)
+  UE4Editor-TP1_Unreal-0143.dll (0:00.82 at +0:16)
+     Création de la bibliothèque C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\UE4Editor-TP1_Unreal-0143.suppressed.lib et de l'objet C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\UE4Editor-TP1_Unreal-0143.suppressed.exp
+  UE4Editor-TP1_Unreal-0143.lib (0:00.10 at +0:17)
+     Création de la bibliothèque C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\UE4Editor-TP1_Unreal-0143.lib et de l'objet C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\UE4Editor-TP1_Unreal-0143.exp
+  TP1_UnrealEditor.target (0:00.71 at +0:17)
+  ---------------------- Done ----------------------
+  
+      Rebuild All: 1 succeeded, 0 failed, 0 skipped
+  
+  1 build system warning(s):
+     - License is invalid
+  
+  Total time in XGE executor: 20,06 seconds
+  Total execution time: 54,05 seconds

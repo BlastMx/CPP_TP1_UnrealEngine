@@ -21,9 +21,17 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(ATP1_UnrealCharacter::execSpawnBullet)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->SpawnBullet();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ATP1_UnrealCharacter::execSpawnObject)
 	{
 		P_GET_STRUCT(FVector,Z_Param_Location);
@@ -37,9 +45,32 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 	{
 		UClass* Class = ATP1_UnrealCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "SpawnBullet", &ATP1_UnrealCharacter::execSpawnBullet },
 			{ "SpawnObject", &ATP1_UnrealCharacter::execSpawnObject },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "TP1_UnrealCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATP1_UnrealCharacter, nullptr, "SpawnBullet", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnObject_Statics
 	{
@@ -89,6 +120,14 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletPawn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BulletPawn;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DecaleBullet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DecaleBullet;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActorToSpawn_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ActorToSpawn;
@@ -121,6 +160,7 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TP1_Unreal,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATP1_UnrealCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnBullet, "SpawnBullet" }, // 3747405900
 		{ &Z_Construct_UFunction_ATP1_UnrealCharacter_SpawnObject, "SpawnObject" }, // 1322979271
 	};
 #if WITH_METADATA
@@ -130,6 +170,20 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 		{ "ModuleRelativePath", "TP1_UnrealCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BulletPawn_MetaData[] = {
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "TP1_UnrealCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BulletPawn = { "BulletPawn", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealCharacter, BulletPawn), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BulletPawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BulletPawn_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_DecaleBullet_MetaData[] = {
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "TP1_UnrealCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_DecaleBullet = { "DecaleBullet", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealCharacter, DecaleBullet), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_DecaleBullet_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_DecaleBullet_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_ActorToSpawn_MetaData[] = {
 		{ "Category", "Spawning" },
@@ -185,6 +239,8 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATP1_UnrealCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BulletPawn,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_DecaleBullet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_ActorToSpawn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealCharacter_Statics::NewProp_BaseTurnRate,
@@ -219,7 +275,7 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATP1_UnrealCharacter, 1046248021);
+	IMPLEMENT_CLASS(ATP1_UnrealCharacter, 154965714);
 	template<> TP1_UNREAL_API UClass* StaticClass<ATP1_UnrealCharacter>()
 	{
 		return ATP1_UnrealCharacter::StaticClass();
