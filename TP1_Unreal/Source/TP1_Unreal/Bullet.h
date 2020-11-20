@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TP1_UnrealCharacter.h"
+#include "TP1_Unreal\TP1_UnrealGameMode.h"
 #include "GameFramework/Actor.h"
 #include "Bullet.generated.h"
 
@@ -22,7 +22,7 @@ protected:
 
 public:
 
-	ATP1_UnrealCharacter* ThirdPersonCharacter;
+	ATP1_UnrealGameMode* MyGameMode;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

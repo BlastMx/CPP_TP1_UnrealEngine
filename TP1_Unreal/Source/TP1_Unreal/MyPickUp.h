@@ -30,18 +30,4 @@ public:
 	UPROPERTY(EditAnywhere)
 		USceneComponent* HoldingComp;
 
-	UFUNCTION()
-		void RotateActor();
-
-	UFUNCTION()
-		void Pickup();
-
-	bool bHolding;
-	bool bGravity;
-
-	FRotator ControlRotation;
-	ACharacter* MyCharacter;
-	UCapsuleComponent* PlayerCapsule;
-	FVector ForwardVector;
-
 };

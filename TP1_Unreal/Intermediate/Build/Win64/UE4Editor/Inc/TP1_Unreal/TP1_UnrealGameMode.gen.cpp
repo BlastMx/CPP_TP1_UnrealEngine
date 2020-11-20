@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealGameMode() {}
 	TP1_UNREAL_API UClass* Z_Construct_UClass_ATP1_UnrealGameMode();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 	UPackage* Z_Construct_UPackage__Script_TP1_Unreal();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 // End Cross Module References
 	void ATP1_UnrealGameMode::StaticRegisterNativesATP1_UnrealGameMode()
 	{
@@ -31,6 +34,19 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealGameMode() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletPawn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BulletPawn;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DecaleBullet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DecaleBullet;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActorToSpawn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ActorToSpawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +62,32 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealGameMode() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_BulletPawn_MetaData[] = {
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "TP1_UnrealGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_BulletPawn = { "BulletPawn", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealGameMode, BulletPawn), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_BulletPawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_BulletPawn_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_DecaleBullet_MetaData[] = {
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "TP1_UnrealGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_DecaleBullet = { "DecaleBullet", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealGameMode, DecaleBullet), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_DecaleBullet_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_DecaleBullet_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_ActorToSpawn_MetaData[] = {
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "TP1_UnrealGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_ActorToSpawn = { "ActorToSpawn", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATP1_UnrealGameMode, ActorToSpawn), Z_Construct_UClass_AActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_ActorToSpawn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_ActorToSpawn_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATP1_UnrealGameMode_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_BulletPawn,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_DecaleBullet,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATP1_UnrealGameMode_Statics::NewProp_ActorToSpawn,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATP1_UnrealGameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATP1_UnrealGameMode>::IsAbstract,
 	};
@@ -55,11 +97,11 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealGameMode() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ATP1_UnrealGameMode_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::PropPointers),
 		0,
 		0x008802ACu,
 		METADATA_PARAMS(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ATP1_UnrealGameMode_Statics::Class_MetaDataParams))
@@ -73,7 +115,7 @@ void EmptyLinkFunctionForGeneratedCodeTP1_UnrealGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATP1_UnrealGameMode, 1164256810);
+	IMPLEMENT_CLASS(ATP1_UnrealGameMode, 4153244139);
 	template<> TP1_UNREAL_API UClass* StaticClass<ATP1_UnrealGameMode>()
 	{
 		return ATP1_UnrealGameMode::StaticClass();

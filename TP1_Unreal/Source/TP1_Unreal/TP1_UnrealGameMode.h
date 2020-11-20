@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "TP1_UnrealCharacter.h"
 #include "GameFramework/GameModeBase.h"
 #include "TP1_UnrealGameMode.generated.h"
 
@@ -20,6 +19,15 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+		TSubclassOf<AActor> ActorToSpawn;
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+		UMaterialInterface* DecaleBullet;
+
+	UPROPERTY(EditAnywhere, Category = "Spawning")
+		TSubclassOf<AActor> BulletPawn;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

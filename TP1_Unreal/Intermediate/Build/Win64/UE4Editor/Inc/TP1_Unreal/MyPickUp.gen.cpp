@@ -20,72 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeMyPickUp() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(AMyPickUp::execPickup)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->Pickup();
-		P_NATIVE_END;
-	}
-	DEFINE_FUNCTION(AMyPickUp::execRotateActor)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->RotateActor();
-		P_NATIVE_END;
-	}
 	void AMyPickUp::StaticRegisterNativesAMyPickUp()
 	{
-		UClass* Class = AMyPickUp::StaticClass();
-		static const FNameNativePtrPair Funcs[] = {
-			{ "Pickup", &AMyPickUp::execPickup },
-			{ "RotateActor", &AMyPickUp::execRotateActor },
-		};
-		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_AMyPickUp_Pickup_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickUp_Pickup_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyPickUp.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPickUp_Pickup_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPickUp, nullptr, "Pickup", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPickUp_Pickup_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickUp_Pickup_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMyPickUp_Pickup()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPickUp_Pickup_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_AMyPickUp_RotateActor_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AMyPickUp_RotateActor_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "MyPickUp.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyPickUp_RotateActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyPickUp, nullptr, "RotateActor", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AMyPickUp_RotateActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AMyPickUp_RotateActor_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AMyPickUp_RotateActor()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AMyPickUp_RotateActor_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AMyPickUp_NoRegister()
 	{
@@ -94,7 +30,6 @@ void EmptyLinkFunctionForGeneratedCodeMyPickUp() {}
 	struct Z_Construct_UClass_AMyPickUp_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
-		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -113,10 +48,6 @@ void EmptyLinkFunctionForGeneratedCodeMyPickUp() {}
 	UObject* (*const Z_Construct_UClass_AMyPickUp_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_AActor,
 		(UObject* (*)())Z_Construct_UPackage__Script_TP1_Unreal,
-	};
-	const FClassFunctionLinkInfo Z_Construct_UClass_AMyPickUp_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyPickUp_Pickup, "Pickup" }, // 1280737417
-		{ &Z_Construct_UFunction_AMyPickUp_RotateActor, "RotateActor" }, // 291343177
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyPickUp_Statics::Class_MetaDataParams[] = {
@@ -152,11 +83,11 @@ void EmptyLinkFunctionForGeneratedCodeMyPickUp() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		FuncInfo,
+		nullptr,
 		Z_Construct_UClass_AMyPickUp_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		UE_ARRAY_COUNT(FuncInfo),
+		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_AMyPickUp_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -171,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPickUp() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyPickUp, 2475071621);
+	IMPLEMENT_CLASS(AMyPickUp, 90095571);
 	template<> TP1_UNREAL_API UClass* StaticClass<AMyPickUp>()
 	{
 		return AMyPickUp::StaticClass();

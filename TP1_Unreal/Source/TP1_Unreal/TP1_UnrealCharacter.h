@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "TP1_Unreal\TP1_UnrealGameMode.h"
+#include "TP1_Unreal\MyPickUp.h"
 #include "GameFramework/Character.h"
 #include "TP1_UnrealCharacter.generated.h"
 
@@ -32,17 +34,25 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TSubclassOf<AActor> ActorToSpawn;
+	ATP1_UnrealGameMode* MyGameMode;
 
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	UMaterialInterface* DecaleBullet;
+	AMyPickUp* pickUp;
 
-	UPROPERTY(EditAnywhere, Category = "Spawning")
-	TSubclassOf<AActor> BulletPawn;
+	bool bGrab;
+
+	FVector Start;
+	FVector ForwardVector;
+	FVector End;
+
+	FHitResult Hit;
+
+	FComponentQueryParams DefaultComponentQueryParams;
+	FCollisionResponseParams DefaultResponseParam;
 
 protected:
 	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaTime) override;
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
@@ -87,6 +97,9 @@ public:
 
 	UFUNCTION()
 	void SpawnBullet();
+
+	UFUNCTION()
+	void PickupObject();
 
 	void SetHealth(float value);
 };

@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include <Runtime\Engine\Classes\Kismet\GameplayStatics.h>
 
 //////////////////////////////////////////////////////////////////////////
 // ATP1_UnrealCharacter
@@ -52,6 +53,24 @@ void ATP1_UnrealCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	Health = 100.0f;
+
+	MyGameMode = GetWorld()->GetAuthGameMode<ATP1_UnrealGameMode>(); //Cast le GameMode pour réutiliser ses variables
+}
+
+void ATP1_UnrealCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	Start = GetActorLocation();
+	ForwardVector = GetActorForwardVector();
+	End = ((ForwardVector * 300.f) + Start);
+
+	FVector posPickUp = FVector(150.0f, 0.0f, 50.0f);
+
+	if (bGrab && pickUp != NULL)
+	{
+		pickUp->SetActorLocation(GetActorLocation() + posPickUp);
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -83,7 +102,8 @@ void ATP1_UnrealCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &ATP1_UnrealCharacter::OnResetVR);
 
 	//Shoot bullet
-	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATP1_UnrealCharacter::SpawnBullet);
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATP1_UnrealCharacter::SpawnBullet); //Fait spawn un project quand le joueur appuies sur la touche associé
+	PlayerInputComponent->BindAction("PickUp", IE_Pressed, this, &ATP1_UnrealCharacter::PickupObject); //Permet de pickup un objet
 }
 
 
@@ -105,7 +125,7 @@ void ATP1_UnrealCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector L
 void ATP1_UnrealCharacter::SpawnObject(FVector Loc, FRotator Rot)
 {
 	FActorSpawnParameters SpawnParams;
-	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(ActorToSpawn, Loc, Rot, SpawnParams);
+	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(MyGameMode->ActorToSpawn, Loc, Rot, SpawnParams);
 }
 
 void ATP1_UnrealCharacter::TurnAtRate(float Rate)
@@ -152,11 +172,29 @@ void ATP1_UnrealCharacter::MoveRight(float Value)
 void ATP1_UnrealCharacter::SpawnBullet()
 {
 	FVector posSwpan = GetActorLocation() + FVector(200.0f, 0.0f, 0.0f);
-	FRotator rotSpawn = /*GetActorRotation();*/ FRotator(0.0f, 0.0f, 0.0f);
+	FRotator rotSpawn = FRotator(0.0f, 0.0f, 0.0f);
 
 	FActorSpawnParameters SpawnParams;
 
-	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(BulletPawn, posSwpan, rotSpawn, SpawnParams);
+	AActor* SpawnedActorRef = GetWorld()->SpawnActor<AActor>(MyGameMode->BulletPawn, posSwpan, rotSpawn, SpawnParams); //Fait Spawn un projectile devant le joueur
+}
+
+void ATP1_UnrealCharacter::PickupObject()
+{
+	bGrab = !bGrab;
+
+	if (bGrab)
+	{
+
+		if (GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility))
+		{
+			pickUp = Cast<AMyPickUp>(Hit.GetActor());
+		}
+	}
+	else
+	{
+		pickUp = NULL;
+	}
 }
 
 void ATP1_UnrealCharacter::SetHealth(float value)

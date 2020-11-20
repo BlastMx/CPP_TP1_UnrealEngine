@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TP1_Unreal.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A5D72176-2513-41CE-8617-55E0030D197F}</UniqueIdentifier>
+      <UniqueIdentifier>{B7B59664-C3D8-4679-9EE0-9779A4D913F4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TP1_Unreal.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{22BD2EA1-CC44-40C5-8870-1E4036A4E80E}</UniqueIdentifier>
+      <UniqueIdentifier>{09367086-3FDB-4984-B28D-40B8D6D3CD72}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TP1_Unreal">
-      <UniqueIdentifier>{669B035C-0511-4CF8-83E6-82FF8CBD5C1D}</UniqueIdentifier>
+      <UniqueIdentifier>{C0B4A72E-AAA6-49CF-AC48-1CFB8673D009}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\TP1_Unreal\Bullet.cpp">
       <Filter>Source\TP1_Unreal</Filter>
@@ -42,6 +42,12 @@
       <Filter>Source\TP1_Unreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TP1_Unreal\Lava.h">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TP1_Unreal\Manager.cpp">
+      <Filter>Source\TP1_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TP1_Unreal\Manager.h">
       <Filter>Source\TP1_Unreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TP1_Unreal\MyPickUp.cpp">
@@ -77,6 +83,5 @@
     <ClInclude Include="..\..\Source\TP1_Unreal\TP1_UnrealGameMode.h">
       <Filter>Source\TP1_Unreal</Filter>
     </ClInclude>
-    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

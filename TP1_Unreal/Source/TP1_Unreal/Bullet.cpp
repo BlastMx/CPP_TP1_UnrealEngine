@@ -29,7 +29,7 @@ void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
 
-	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	MyGameMode = GetWorld()->GetAuthGameMode<ATP1_UnrealGameMode>(); //Cast le GameMode pour réutiliser ses variables
 }
 
 // Called every frame
@@ -38,13 +38,13 @@ void ABullet::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	const FVector forward = this->GetActorForwardVector();
-	Bullet->AddForce(forward * 10000.0f * Bullet->GetMass());
+	Bullet->AddForce(forward * 10000.0f * Bullet->GetMass()); //Ajoute une force physique au projectile pour le faire avancer
 }
 
 void ABullet::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	UGameplayStatics::SpawnDecalAttached(ThirdPersonCharacter->DecaleBullet, FVector(25.0f), NULL, NAME_None, Hit.ImpactPoint, FRotator::ZeroRotator, EAttachLocation::KeepRelativeOffset, 10.0f);
+	UGameplayStatics::SpawnDecalAtLocation(this, MyGameMode->DecaleBullet, FVector(25.0f), Hit.Location, FRotator(-90, 0, 0), 10.0f); //Fais spawn un decal sur l'endroi de l'impact
 
-	Destroy();
+	Destroy(); //Détruit le projectile une fois un endroit touché
 }
 

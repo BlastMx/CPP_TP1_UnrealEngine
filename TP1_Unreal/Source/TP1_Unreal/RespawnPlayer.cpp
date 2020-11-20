@@ -33,16 +33,16 @@ void ARespawnPlayer::Tick(float DeltaTime)
 
 void ARespawnPlayer::MyDoOnce()
 {
-	AController* SavedController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	AController* SavedController = UGameplayStatics::GetPlayerController(GetWorld(), 0); //Cherche le controller sur la scène
 	SavedController->UnPossess();
 
-	ThirdPersonCharacter->Destroy();
+	ThirdPersonCharacter->Destroy(); //Détuit le joueur présent
 	
 	FActorSpawnParameters SpawnParams;
-	APawn* myPawn = GetWorld()->SpawnActor<APawn>(ActorToSpawn, FTransform(startPos));
+	APawn* myPawn = GetWorld()->SpawnActor<APawn>(ActorToSpawn, FTransform(startPos)); //Créé un nouveau player
 
-	SavedController->Possess(myPawn);
+	SavedController->Possess(myPawn);//Fais en sorte de pouvoir contrôler le nouveau player créé
 
-	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)); //Cast de nouveau le player sur la scène
 }
 

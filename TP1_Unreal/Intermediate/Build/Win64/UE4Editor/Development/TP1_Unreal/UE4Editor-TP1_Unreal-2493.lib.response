@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TP1_Unreal-2493.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\TP1_UnrealEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Bullet.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Lava.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Manager.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\MyPickUp.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\RespawnPlayer.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_Unreal.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_UnrealCharacter.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_UnrealGameMode.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Bullet.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Lava.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Manager.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\MyPickUp.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\RespawnPlayer.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_Unreal.init.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_UnrealCharacter.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\TP1_UnrealGameMode.gen.cpp.obj"
+"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\Default.rc2.res"
+/OUT:"C:\Users\mxcol\Documents\Unreal Projects\CPP_TP1_UnrealEngine\TP1_Unreal\Intermediate\Build\Win64\UE4Editor\Development\TP1_Unreal\UE4Editor-TP1_Unreal-2493.lib"
+/INCLUDE:IMPLEMENT_MODULE_TP1_Unreal

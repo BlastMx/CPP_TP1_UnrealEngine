@@ -46,8 +46,9 @@ void ALava::OnOverlapBegin(UPrimitiveComponent* Comp, AActor* otherActor, UPrimi
 	if (otherActor->ActorHasTag(FName("Player"))) //Vérifie si l'objet qui a été touché par la lave est le player
 	{
 		ThirdPersonCharacter->SpawnObject(ThirdPersonCharacter->GetActorLocation(), FRotator(0.0f, 0.0f, 0.0f)); //Fait apparaitre le feu sur la position du player
-		Respawn->MyDoOnce();
-		//ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+		Respawn->MyDoOnce(); //Call la fonction de mort et respawn
+
+		ThirdPersonCharacter = Cast<ATP1_UnrealCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)); //Cast de nouveau le player sur la scène
 	}
 }
 

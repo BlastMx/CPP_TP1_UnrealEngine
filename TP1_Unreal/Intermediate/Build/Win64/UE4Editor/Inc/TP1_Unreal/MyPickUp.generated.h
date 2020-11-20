@@ -14,18 +14,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define TP1_UNREAL_MyPickUp_generated_h
 
 #define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_SPARSE_DATA
-#define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execPickup); \
-	DECLARE_FUNCTION(execRotateActor);
-
-
-#define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execPickup); \
-	DECLARE_FUNCTION(execRotateActor);
-
-
+#define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_RPC_WRAPPERS
+#define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_RPC_WRAPPERS_NO_PURE_DECLS
 #define TP1_Unreal_Source_TP1_Unreal_MyPickUp_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyPickUp(); \
