@@ -1,5 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+/*
+	A partir de cette class c++, un blueprint à été créé uniquement pour pouvoir ajouter à la main le projectile à faire spawn.
+	Et permettre au Player de s'en servir de nouveau même après été détruit par	la lave.
+*/
+
 
 #include "Bullet.h"
 #include "Components/StaticMeshComponent.h"

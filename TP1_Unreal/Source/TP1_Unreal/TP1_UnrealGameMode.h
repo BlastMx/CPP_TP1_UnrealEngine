@@ -1,5 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
+/*
+	A partir de cette class c++, un blueprint à été créé uniquement pour pouvoir ajouter à la main les éléments des
+	variables suivantes dans ce script. Et permettre au Player de s'en servir de nouveau même après été détruit par
+	la lave.
+*/
+
 #pragma once
 
 #include "CoreMinimal.h"
